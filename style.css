@@ -68,6 +68,14 @@ body {
   object-fit: cover;
 }
 
+#player1 {
+  display: block;
+}
+
+#player2 {
+  display: none;
+}
+
 .star {
   visibility: hidden;
 }

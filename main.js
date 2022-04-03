@@ -22,10 +22,16 @@ var vds = [
 var player = document.getElementById("player");
 let ua = navigator.userAgent.toLowerCase();
 
-function setMp4Source01() {
+function setSource01() {
   if (vds.length > 0) {
     var currentVideoIndex = Math.floor(Math.random() * vds.length);
-    var currentVideo = "asset/" + vds[currentVideoIndex] + ".webm";
+    if (ua.indexOf("safari") != -1) {
+      if (ua.indexOf("chrome") > -1) {
+        var currentVideo = "asset/" + vds[currentVideoIndex] + ".webm";
+      } else {
+        var currentVideo = "asset/" + vds[currentVideoIndex] + ".mp4";
+      }
+    }
     player.src = currentVideo;
     player.load();
     player.play();
@@ -67,7 +73,7 @@ function setMp4Source01() {
 player.addEventListener("ended", nextVideo, false);
 
 function nextVideo() {
-  setMp4Source01();
+  setSource01();
 }
 
 nextVideo();
