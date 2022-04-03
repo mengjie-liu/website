@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>letters</title>
+    <!-- <link rel="icon" href="ii.png" type="image/png"> -->
+    <link rel="stylesheet" type="text/css" href="clock.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/87/three.min.js"></script>
+    <script src="OrbitControls.js"></script>
+    <script src="OBJLoader.js"></script>
+    <script src="MTLLoader.js"></script>
+  </head>
+  <body>
+    <style type="text/css">
+      body {
+        margin: 0;
+      }
+    </style>
+    <!-- <iframe src="music.mp3" allow="autoplay" style="display:none" id="iframeAudio"></iframe>
+	<audio autoplay loop volume=0.5 id="iframeAudio">
+		<source src="music.mp3" volume=0.5 type="audio/mpeg">
+	</audio> -->
+    <div id="bb"></div>
+    <script src="scripts.js"></script>
+    <div class="ab">
+      <div id="about">about</div>
+      <div id="abou">
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Time proceeds as if walking down an
+        endless
+        <span class="green">spiral</span
+        >.<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Twenty-four hours constitute one
+        day, seven days one week, four weeks one month, twelve months one year.
+        Time is divided, by human beings, with all these units we've invented.
+        Tough time moves forward along a straight line, it is these units that
+        bend the line into a <span class="green">spiral</span>, creating an
+        illusion of circularity.<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This work
+        consists of four <span class="green">spirals</span>, each representing a
+        temporal unit mentioned above.
+        <span class="green">‘Day Spiral’</span> consists of twenty-four
+        revolutions,<span class="green">‘Week Spiral’</span> seven,
+        <span class="green">‘Month Spiral’</span> four, and
+        <span class="green">‘Year Spiral’</span> twelve. Through dragging,
+        zooming the model, and observing it from different perspectives, you are
+        invited to rethink what time is.
+      </div>
+    </div>
+    <div id="black">
+      <div id="kaitou">the shape of <span id="green">time</span>...</div>
+    </div>
+
+    <script src="pointer.js"></script>
+    <!-- <script>
+		var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
+  		if (!isChrome){
+     		$('#iframeAudio').remove()
+  		}
+  		else {
+      		$('#playAudio').remove() // just to make sure that it will not have 2x audio in the background 
+ 		}
+		init_pointer({
+            pointerColor: "white",
+			ringSize: 8,
+			ringClickSize: 6
+        })
+		$(document).ready(function(){
+			$("#black").click(function(){
+				$("#black").remove();
+			});
+		})
+	</script> -->
+  </body>
+</html>

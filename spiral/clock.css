@@ -1,0 +1,154 @@
+@font-face {
+  font-family: xi;
+  src: url(font.otf);
+}
+
+body {
+  margin: 0;
+  overflow: hidden;
+  /* cursor: none !important; */
+}
+
+canvas {
+  width: 100%;
+  height: 100%;
+}
+
+.xuanze {
+  position: absolute;
+  left: 10pt;
+  top: 20pt;
+  font-family: xi;
+  font-size: 14pt;
+  letter-spacing: 2pt;
+  color: white;
+}
+
+#bb {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: black;
+  height: 1500pt;
+  width: 1500pt;
+  z-index: -100;
+}
+
+#field {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 2000pt;
+  height: 1200pt;
+}
+
+#black {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  /* opacity: 0; */
+  /* animation-name: dissa;
+  animation-duration: 8s; */
+}
+/* @keyframes dissa {
+  0% {
+    opacity: 1;
+  }
+  58% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+} */
+
+#kaitou {
+  position: absolute;
+  font-family: xi;
+  font-size: 14pt;
+  position: absolute;
+  color: white;
+  letter-spacing: 5pt;
+  left: 50%;
+  top: 53%;
+  transform: translate(-50%, -50%);
+  animation-name: app;
+  animation-duration: 3.5s;
+}
+#green {
+  color: green;
+}
+@keyframes app {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/*about*/
+#about {
+  position: absolute;
+  margin: 2pt;
+  left: 1190pt;
+  top: 20pt;
+  font-size: 14pt;
+  font-family: xi;
+  color: white;
+  letter-spacing: 2pt;
+  /* z-index: 999; */
+}
+#abou {
+  visibility: hidden;
+  font-size: 9.5pt;
+  position: absolute;
+  left: 930pt;
+  top: 50pt;
+  width: 310pt;
+  font-family: xi;
+  color: white;
+  letter-spacing: 1.5pt;
+  line-height: 120%;
+  cursor: default;
+}
+.green {
+  color: green;
+}
+#about:hover {
+  cursor: default;
+  color: green;
+}
+#about:hover + #abou {
+  visibility: visible;
+}
+
+#pointer-dot {
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 0;
+  /*border: 2px solid green;*/
+  position: absolute;
+  border-radius: 4px;
+  z-index: 10;
+  pointer-events: none;
+  transition: border-color 0.5s;
+}
+
+#pointer-ring {
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 0;
+  padding: 10px;
+  border: 1.2px solid white;
+  position: absolute;
+  border-radius: 100px;
+  z-index: 12;
+  pointer-events: none;
+}
