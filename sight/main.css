@@ -1,0 +1,338 @@
+* {
+  margin: 0;
+  padding: 0;
+  /* cursor: url("img/cur.png") 30 40, default; */
+  /* cursor: default; */
+}
+
+body {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  /* cursor: url("img/cur.png") 30 40, default;
+ */
+  cursor: default;
+}
+
+@font-face {
+  font-family: lala;
+  src: url("font/MillionaireRoman.otf");
+}
+
+#welcome {
+  width: 100vw;
+  height: 100vh;
+  background-color: white;
+  text-align: center;
+  position: relative;
+  z-index: 2000;
+  /* transition-delay: 2s; */
+}
+#welcome h3 {
+  letter-spacing: 1.5pt;
+  /* line-height: 38pt; */
+  font-size: 12pt;
+  font-family: lala;
+  font-weight: normal;
+  left: 50vw;
+  top: 50vh;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  filter: blur(0);
+  transition: filter ease-out 4s;
+  text-shadow: rgba(0, 0, 0, 0.2) 1px 1px 2px;
+}
+
+#start {
+  display: none;
+}
+/* #street {
+  display: none;
+} */
+
+.selected {
+  filter: grayscale(0.5);
+}
+
+.draggable {
+  z-index: 0;
+  position: absolute;
+  background-repeat: no-repeat;
+  /* object-fit: cover; */
+  background-size: auto 100vh;
+  box-shadow: rgba(0, 0, 0, 0.2) 0 0 20px;
+  /* cursor: url("img/move.png") 40 38.5, move !important; */
+  cursor: move !important;
+  filter: blur(0) saturate(0.75);
+  overflow: hidden;
+  opacity: 1;
+  transition: filter linear 0.5s, box-shadow linear 0.3s, z-index linear 0.3s,
+    opacity linear 0.3s;
+}
+.draggable:hover {
+  box-shadow: rgba(0, 0, 0, 0.9) 0 0 30px;
+  /* z-index: 200 !important; */
+  /* transform: scale(1.1); */
+}
+
+.simg {
+  /* mix-blend-mode: multiply; */
+  opacity: 0.95;
+  z-index: 0;
+  position: absolute;
+  box-shadow: rgba(0, 0, 0, 0.25) 0 0 20px;
+  background-repeat: no-repeat;
+  background-size: 100vw;
+  filter: saturate(0.8);
+  transition: opacity linear 0.75s, filter linear 0.5s, box-shadow linear 0.5s,
+    z-index 0.2s step-end;
+}
+.simg:hover {
+  box-shadow: rgba(0, 0, 0, 0.9) 0 0 30px;
+  z-index: 200;
+  filter: saturate(0.05);
+  opacity: 1;
+  /* transition-delay: 1s; */
+  /* transform: scale(1.1); */
+}
+
+.current {
+  display: block;
+}
+.hide {
+  display: none;
+}
+
+#back {
+  width: 1.1vw;
+  position: absolute;
+  margin: 0.1vh;
+  cursor: pointer;
+  /* mix-blend-mode: difference; */
+  opacity: 0.95;
+}
+#back img {
+  width: 100%;
+}
+#up {
+  width: 2.8vw;
+  position: absolute;
+  margin: 0.5vh;
+  margin-top: 0.1vh;
+  cursor: pointer;
+  mix-blend-mode: difference;
+  opacity: 0.95;
+}
+#up img {
+  width: 100%;
+}
+#drag {
+  width: 1.5vw;
+  position: absolute;
+  margin-right: -0.4vh;
+  margin-bottom: -0.9vh;
+  /* mix-blend-mode: difference; */
+  opacity: 0.95;
+}
+#drag img {
+  width: 100%;
+  /* height: 100vh; */
+}
+
+.draggable .mv {
+  left: 0;
+  top: 0;
+  position: absolute;
+  /* width: 100vw; */
+  height: 100vh;
+}
+
+.draggable .colorb {
+  left: 0;
+  top: 0;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+}
+
+.icon {
+  position: absolute;
+  top: 91.5vh;
+  transform: translateX(-50%);
+  z-index: 1000;
+  vertical-align: center;
+  opacity: 0.85;
+  cursor: pointer;
+}
+
+#str,
+#home {
+  position: absolute;
+  display: inline-block;
+  width: 3.5vw;
+  vertical-align: center;
+  cursor: pointer;
+  z-index: 1010;
+}
+#str {
+  left: 50vw;
+  transform: translate(-50%);
+}
+
+#home {
+  left: 50vw;
+  transform: translate(-50%);
+  display: none;
+}
+.icon img {
+  width: 100%;
+  vertical-align: center;
+}
+
+#nh1 {
+  width: 40vw;
+  height: 42vh;
+  left: 54vw;
+  top: 0;
+  background-image: url(img/nh1.png);
+  background-position-x: -54vw;
+  background-position-y: 0;
+}
+#nh2 {
+  width: 34vw;
+  height: 30vh;
+  left: 59.5vw;
+  top: 68vh;
+  background-image: url(img/nh2.png);
+  background-position-x: -59.5vw;
+  background-position-y: -68vh;
+}
+#nh3 {
+  width: 33vw;
+  height: 45vh;
+  left: 13vw;
+  top: 20vh;
+  background-image: url(img/nh3.png);
+  background-position-x: -13vw;
+  background-position-y: -20vh;
+}
+
+#bj1 {
+  width: 16vw;
+  height: 58vh;
+  left: 16vw;
+  top: 24vh;
+  background-image: url(img/bj1.png);
+  background-position-x: -16vw;
+  background-position-y: -24vh;
+}
+#bj2 {
+  width: 37vw;
+  height: 28vh;
+  left: 2vw;
+  top: 72vh;
+  background-image: url(img/bj2.png);
+  background-position-x: -2vw;
+  background-position-y: -72vh;
+}
+#bj3 {
+  width: 35vw;
+  height: 30vh;
+  left: 63vw;
+  top: 51.5vh;
+  background-image: url(img/bj3.png);
+  background-position-x: -63vw;
+  background-position-y: -51.5vh;
+}
+#bj4 {
+  width: 22vw;
+  height: 45vh;
+  left: 55vw;
+  top: 23.5vh;
+  background-image: url(img/bj4.png);
+  background-position-x: -52vw;
+  background-position-y: -23.5vh;
+}
+
+#sh1 {
+  width: 40vw;
+  height: 45vh;
+  left: 30vw;
+  top: 42vh;
+  background-image: url(img/sh1.png);
+  background-position-x: -30vw;
+  background-position-y: -42vh;
+}
+#sh2 {
+  width: 39.5vw;
+  height: 47vh;
+  left: 0;
+  top: 0;
+  background-image: url(img/sh2.png);
+  background-position-x: 0;
+  background-position-y: 0;
+}
+#sh3 {
+  width: 16vw;
+  height: 65vh;
+  left: 84vw;
+  top: 5vh;
+  background-image: url(img/sh3.png);
+  background-position-x: -84vw;
+  background-position-y: -5vh;
+}
+#sh4 {
+  width: 15.5vw;
+  height: 32vh;
+  left: 72vw;
+  top: 13vh;
+  background-image: url(img/sh4.png);
+  background-position-x: -72vw;
+  background-position-y: -13vh;
+}
+
+#kt1 {
+  width: 12vw;
+  height: 37vh;
+  left: 31vw;
+  top: 38vh;
+  background-image: url(img/kt1.png);
+  background-position-x: -31vw;
+  background-position-y: -38vh;
+}
+#kt2 {
+  width: 16vw;
+  height: 49vh;
+  left: 45vw;
+  top: 1.5vh;
+  background-image: url(img/kt2.png);
+  background-position-x: -45vw;
+  background-position-y: -1.5vh;
+}
+#kt3 {
+  width: 13vw;
+  height: 33vh;
+  left: 5vw;
+  top: 51vh;
+  background-image: url(img/kt3.png);
+  background-position-x: -5vw;
+  background-position-y: -51vh;
+}
+#kt4 {
+  width: 12vw;
+  height: 16vh;
+  left: 75vw;
+  top: 48vh;
+  background-image: url(img/kt4.png);
+  background-position-x: -75vw;
+  background-position-y: -48vh;
+}
+#kt5 {
+  width: 19.5vw;
+  height: 22vh;
+  left: 39vw;
+  top: 73.5vh;
+  background-image: url(img/kt5.png);
+  background-position-x: -39vw;
+  background-position-y: -73.5vh;
+}
