@@ -25,13 +25,7 @@ let ua = navigator.userAgent.toLowerCase();
 function setSource01() {
   if (vds.length > 0) {
     var currentVideoIndex = Math.floor(Math.random() * vds.length);
-    if (ua.indexOf("safari") != -1) {
-      if (ua.indexOf("chrome") > -1) {
-        var currentVideo = "asset/" + vds[currentVideoIndex] + ".webm";
-      } else {
-        var currentVideo = "asset/" + vds[currentVideoIndex] + ".mp4";
-      }
-    }
+    var currentVideo = "asset/" + vds[currentVideoIndex] + ".webm";
     player.src = currentVideo;
     player.load();
     player.play();
@@ -56,13 +50,7 @@ function setSource01() {
       "c16",
     ];
     var currentVideoIndex = Math.floor(Math.random() * vds.length);
-    if (ua.indexOf("safari") != -1) {
-      if (ua.indexOf("chrome") > -1) {
-        var currentVideo = "asset/" + vds[currentVideoIndex] + ".webm";
-      } else {
-        var currentVideo = "asset/" + vds[currentVideoIndex] + ".mp4";
-      }
-    }
+    var currentVideo = "asset/" + vds[currentVideoIndex] + ".webm";
     player.src = currentVideo;
     player.load();
     player.play();
