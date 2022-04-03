@@ -34,7 +34,7 @@ a {
   text-underline-offset: 2px;
 }
 
-.row a:hover {
+.pInfo a:hover {
   text-decoration: underline 1.5pt;
   text-underline-offset: 2px;
   cursor: pointer;
@@ -76,35 +76,44 @@ a {
   display: block;
 }
 
-.star {
-  visibility: hidden;
-}
-
-.projectList {
+.pName {
   position: absolute;
   top: 22.2%;
   left: 2.2%;
-  width: 95.6%;
   margin: 0 auto;
-  z-index: -1;
-}
-ul,
-li {
-  list-style: none;
-}
-li {
-  padding-bottom: 1.8%;
-}
-.row {
   font-size: 2.25em;
   line-height: 1.15;
+  z-index: -1;
+}
+
+.next {
+  position: absolute;
+  top: 22.2%;
+  right: 2.2%;
+  margin: 0 auto;
+  font-size: 2.25em;
+  line-height: 1.15;
+  z-index: -1;
+}
+
+.pInfo {
+  position: absolute;
+  font-size: 1.25em;
+  line-height: 1.15;
+  top: 26.75%;
+  left: 2.2%;
+  width: 95.6%;
   display: flex;
   gap: 4rem;
   justify-content: space-between;
 }
-.pName {
-  flex: 1;
+.caption {
+  flex: 3;
 }
+.link {
+  flex: 2;
+}
+
 .disc {
   flex: 2;
   padding-right: 0.5em;
