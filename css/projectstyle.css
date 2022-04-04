@@ -193,13 +193,14 @@ a:hover {
 .imgContainer {
   flex: 3;
   padding-top: 18.75rem;
-  padding-bottom: 1rem;
+  /* padding-bottom: 1rem; */
   width: 100%;
   height: auto;
   overflow-y: scroll;
 }
 .imgContainer img {
   width: 100%;
+  padding-bottom: 1rem;
 }
 .textDis {
   flex: 2;
