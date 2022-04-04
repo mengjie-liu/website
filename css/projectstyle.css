@@ -18,8 +18,9 @@ body {
   margin: 0 auto;
   z-index: -1;
   /* display: flex; */
-  gap: 4rem;
+  /* gap: 4rem; */
   justify-content: space-between;
+  height: 100%;
 }
 
 .xixi {
@@ -28,6 +29,9 @@ body {
   width: 34%;
   font-size: 1.25em;
   line-height: 1.165;
+  overflow-y: scroll;
+  height: 76.5%;
+  padding-bottom: 1rem;
 }
 
 .aboutText,
@@ -37,6 +41,9 @@ body {
   left: 39.8%;
   font-size: 2.25em;
   line-height: 1.165;
+  overflow-y: scroll;
+  padding-bottom: 1rem;
+  height: 76.5%;
 }
 
 .imgContainer::-webkit-scrollbar {
@@ -45,9 +52,21 @@ body {
 .textDis::-webkit-scrollbar {
   display: none;
 }
+.aboutText::-webkit-scrollbar {
+  display: none;
+}
+.contactText::-webkit-scrollbar {
+  display: none;
+}
+.xixi::-webkit-scrollbar {
+  display: none;
+}
 
 .imgContainer,
-.textDis {
+.textDis,
+.aboutText,
+.xixi,
+.contactText {
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
 }
@@ -174,7 +193,7 @@ a:hover {
 .imgContainer {
   flex: 3;
   padding-top: 18.75rem;
-  padding-bottom: 1.5rem;
+  padding-bottom: 1rem;
   width: 100%;
   height: auto;
   overflow-y: scroll;
@@ -185,6 +204,6 @@ a:hover {
 .textDis {
   flex: 2;
   margin-top: 18.75rem;
-  padding-bottom: 1.5rem;
+  padding-bottom: 1rem;
   overflow-y: scroll;
 }
