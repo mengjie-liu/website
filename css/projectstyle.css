@@ -202,6 +202,10 @@ a:hover {
   width: 100%;
   padding-bottom: 1rem;
 }
+.imgContainer video {
+  width: 100%;
+  padding-bottom: 1rem;
+}
 .textDis {
   flex: 2;
   margin-top: 18.75rem;
