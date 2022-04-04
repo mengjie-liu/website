@@ -66,16 +66,14 @@ function nextVideo() {
 
 nextVideo();
 
-document.addEventListener("mousemove", function () {
-  bg.style.display = "none";
-});
-
 var counter = 0;
 var resetCounter = function () {
   bg.style.display = "none";
+  //   player.pause();
   return (counter = 0);
 };
 document.addEventListener("mousemove", resetCounter, true);
+
 let interval = setInterval(function () {
   counter += 1;
   if (counter > 10) {
