@@ -6,6 +6,12 @@
 body {
   overscroll-behavior-y: none;
   overscroll-behavior-x: none;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+body::-webkit-scrollbar {
+  display: none;
 }
 
 * {
@@ -94,7 +100,7 @@ li {
 }
 .row {
   font-size: 2.25em;
-  line-height: 1.15;
+  line-height: 1.165;
   display: flex;
   gap: 4rem;
   justify-content: space-between;
