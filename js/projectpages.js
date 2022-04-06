@@ -72,11 +72,11 @@ var resetCounter = function () {
   //   player.pause();
   return (counter = 0);
 };
-document.addEventListener("mousemove", resetCounter, true);
+document.addEventListener("click", resetCounter, true);
 
 let interval = setInterval(function () {
   counter += 1;
-  if (counter > 10) {
+  if (counter > 20) {
     bg.style.display = "block";
     clearInterval("interval");
   }

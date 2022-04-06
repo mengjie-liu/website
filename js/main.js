@@ -66,7 +66,7 @@ function nextVideo() {
 
 nextVideo();
 
-document.addEventListener("mousemove", function () {
+document.addEventListener("click", function () {
   bg.style.display = "none";
 });
 
@@ -75,10 +75,16 @@ var resetCounter = function () {
   bg.style.display = "none";
   return (counter = 0);
 };
-document.addEventListener("mousemove", resetCounter, true);
+
+// var events = ["mousedown", "mousemove", "keypress", "scroll", "touchstart"];
+// events.forEach(function (name) {
+//   document.addEventListener(name, resetCounter, true);
+// });
+
+document.addEventListener("click", resetCounter, true);
 let interval = setInterval(function () {
   counter += 1;
-  if (counter > 10) {
+  if (counter > 20) {
     bg.style.display = "block";
     clearInterval("interval");
   }
