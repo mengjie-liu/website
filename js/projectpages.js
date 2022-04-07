@@ -50,7 +50,7 @@ function setSource01() {
       "c16",
     ];
     var currentVideoIndex = Math.floor(Math.random() * vds.length);
-    var currentVideo = "asset/" + vds[currentVideoIndex] + ".webm";
+    var currentVideo = "../asset/" + vds[currentVideoIndex] + ".webm";
     player.src = currentVideo;
     player.load();
     player.play();
