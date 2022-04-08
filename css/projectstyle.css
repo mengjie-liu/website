@@ -353,7 +353,7 @@ body{
     position: fixed;
     font-size: 14pt;
     line-height: 1.15;
-    top: 24.35%;
+    top: 24.45%;
     left: 2.75%;
     /* width: 60%; */
     display: flex;
@@ -380,7 +380,7 @@ body{
     z-index: -2;
   }
   .imgContainer {
-    padding-top: 16.5rem;
+    padding-top: 16.3rem;
     /* padding-bottom: 1rem; */
     width: 100%;
     height: auto;
