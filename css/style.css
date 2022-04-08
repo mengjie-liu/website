@@ -8,6 +8,7 @@ body {
   overscroll-behavior-x: none;
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
+  font-size:16pt;
 }
 
 body::-webkit-scrollbar {
