@@ -8,7 +8,7 @@ body {
   overscroll-behavior-x: none;
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
-  font-size:16pt;
+  /* font-size:16pt; */
 }
 
 body::-webkit-scrollbar {
@@ -28,6 +28,18 @@ a {
   text-decoration: none;
 }
 
+ul,
+li {
+  list-style: none;
+}
+
+.row a:hover {
+  text-decoration: underline 1.5pt;
+  text-underline-offset: 2px;
+  cursor: pointer;
+}
+
+@media only screen and (min-width: 840px) {
 .title {
   position: fixed;
   font-size: 4em;
@@ -39,12 +51,6 @@ a {
 .title:hover {
   text-decoration: underline 1.5pt;
   text-underline-offset: 2px;
-}
-
-.row a:hover {
-  text-decoration: underline 1.5pt;
-  text-underline-offset: 2px;
-  cursor: pointer;
 }
 
 #name {
@@ -80,10 +86,6 @@ a {
   display: block;
 }
 
-.star {
-  visibility: hidden;
-}
-
 .projectList {
   position: absolute;
   top: 22.2%;
@@ -92,10 +94,7 @@ a {
   margin: 0 auto;
   z-index: -1;
 }
-ul,
-li {
-  list-style: none;
-}
+
 li {
   padding-bottom: 1.8%;
 }
@@ -119,4 +118,77 @@ li {
 .year {
   flex: 0.5;
   text-align: right;
+}
+}
+
+@media only screen and (max-width: 840px) {
+  .title {
+    position: fixed;
+    font-size: 3.35em;
+    line-height: 1.075;
+    z-index: 0;
+    cursor: pointer;
+    /* filter: drop-shadow(0 0 0.1rem rgba(255, 255, 255, 0.5)); */
+  }
+
+  #name {
+    top: 2.25%;
+    left: 2.75%;
+  }
+  #about {
+    top: 2.25%;
+    right: 2.75%;
+  }
+  
+  #contact {
+    display: none;
+  }
+  
+  #bgVd {
+    z-index: 1000;
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .vd {
+    position: fixed;
+    transform: translateX(-50%) translateY(-50%);
+    top: 50%;
+    left: 50%;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+  
+  #player {
+    display: block;
+  }
+
+  .projectList {
+    position: absolute;
+    top: 20%;
+    left: 2.75%;
+    width: 94.5%;
+    margin: 0 auto;
+    z-index: -1;
+  }
+  li {
+    padding-bottom: 6.5%;
+  }
+  .row {
+    font-size: 2em;
+    line-height: 1.165;
+    display: flex;
+    flex-direction: column;
+    /* gap: 4rem;
+    justify-content: space-between; */
+  }
+  .row :nth-child(1) { order: 1; }
+  .row :nth-child(2) { order: 4; }
+  .row :nth-child(3) { order: 2; }
+  .row :nth-child(4) { order: 3; }
+  /* .type, .year{
+    font-size: 0.65em;
+    line-height: 1.325;
+  } */
 }
