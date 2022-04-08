@@ -224,6 +224,9 @@ body{
   padding-bottom: 1rem;
   overflow-y: scroll;
 }
+.clab{
+  display: none;
+}
 }
 
 @media only screen and (max-width: 840px) {
