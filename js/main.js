@@ -73,7 +73,17 @@ document.addEventListener("click", function () {
 var counter = 0;
 var resetCounter = function () {
   bg.style.display = "none";
-  return (counter = 0);
+  counter = 0;
+  let interval = setInterval(function () {
+    counter += 1;
+    if (counter > 20) {
+      player.currentTime = 0;
+      bg.style.display = "block";
+      console.log("block");
+      clearInterval(interval);
+    }
+  }, 2000);
+  // return (counter = 0);
 };
 
 // var events = ["mousedown", "mousemove", "keypress", "scroll", "touchstart"];
@@ -82,11 +92,11 @@ var resetCounter = function () {
 // });
 
 document.addEventListener("click", resetCounter, true);
-let interval = setInterval(function () {
-  counter += 1;
-  if (counter > 20) {
-    player.currentTime = 0;
-    bg.style.display = "block";
-    clearInterval(interval);
-  }
-}, 2000);
+// let interval = setInterval(function () {
+//   counter += 1;
+//   if (counter > 20) {
+//     player.currentTime = 0;
+//     bg.style.display = "block";
+//     clearInterval(interval);
+//   }
+// }, 2000);

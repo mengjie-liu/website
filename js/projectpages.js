@@ -67,18 +67,29 @@ function nextVideo() {
 nextVideo();
 
 var counter = 0;
+
 var resetCounter = function () {
   bg.style.display = "none";
-  //   player.pause();
-  return (counter = 0);
+  counter = 0;
+  let interval = setInterval(function () {
+    counter += 1;
+    if (counter > 20) {
+      player.currentTime = 0;
+      bg.style.display = "block";
+      console.log("block");
+      clearInterval(interval);
+    }
+  }, 2000);
+  // return (counter = 0);
 };
 document.addEventListener("click", resetCounter, true);
 
-let interval = setInterval(function () {
-  counter += 1;
-  if (counter > 20) {
-    player.currentTime = 0;
-    bg.style.display = "block";
-    clearInterval(interval);
-  }
-}, 2000);
+// interval = setInterval(function () {
+//   counter += 1;
+//   if (counter > 20) {
+//     player.currentTime = 0;
+//     bg.style.display = "block";
+//     console.log("block");
+//     clearInterval(interval);
+//   }
+// }, 2000);
