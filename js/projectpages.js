@@ -64,8 +64,6 @@ function nextVideo() {
   setSource01();
 }
 
-nextVideo();
-
 var counter = 0;
 
 var resetCounter = function () {
@@ -83,6 +81,9 @@ var resetCounter = function () {
   // return (counter = 0);
 };
 document.addEventListener("click", resetCounter, true);
+
+nextVideo();
+resetCounter();
 
 // interval = setInterval(function () {
 //   counter += 1;
