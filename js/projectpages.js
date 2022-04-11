@@ -72,7 +72,9 @@ var resetCounter = function () {
   let interval = setInterval(function () {
     counter += 1;
     if (counter > 20) {
+      player.pause();
       player.currentTime = 0;
+      player.play();
       bg.style.display = "block";
       console.log("block");
       clearInterval(interval);
