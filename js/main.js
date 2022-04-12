@@ -68,7 +68,6 @@ nextVideo();
 
 document.addEventListener("click", function () {
   bg.style.display = "none";
-  player.pause();
 });
 
 var counter = 0;
