@@ -68,6 +68,7 @@ var counter = 0;
 
 var resetCounter = function () {
   bg.style.display = "none";
+
   counter = 0;
   let interval = setInterval(function () {
     counter += 1;
