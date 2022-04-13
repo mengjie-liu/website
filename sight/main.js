@@ -165,7 +165,7 @@ $(function () {
         $(this).append(function () {
           return `
         <video class="mv" id="${idname}">
-        <source src="img/${srcname}.mp4" type="video/mp4">
+        <source src="img/${srcname}.mp4" type="video/mp4" preload>
         </video>
        `;
         });
