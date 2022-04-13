@@ -154,6 +154,7 @@ $(function () {
       var top = $(this).css("background-position-y");
 
       if (this.querySelector(".mv")) {
+        this.querySelector(".mv").load();
         this.querySelector(".mv").play();
         // $(this).find(".colorb").fadeOut("fast");
         // if (!srcname.match("^nh")) {
@@ -165,7 +166,7 @@ $(function () {
         $(this).append(function () {
           return `
         <video class="mv" id="${idname}">
-        <source src="img/${srcname}.mp4" type="video/mp4" preload>
+        <source src="img/${srcname}.mp4" type="video/mp4">
         </video>
        `;
         });
@@ -175,6 +176,7 @@ $(function () {
           display: "none",
         });
         $(this).find(".mv").fadeIn("slow");
+        this.querySelector(".mv").load();
         this.querySelector(".mv").play();
 
         // $(this)
