@@ -81,7 +81,14 @@ var resetCounter = function () {
       player.currentTime = 0;
       player.play();
       bg.style.display = "block";
-      console.log("block");
+      // var op = 0;
+      // var timer = setInterval(function () {
+      //   if (op >= 1) clearInterval(timer);
+      //   player.style.opacity = op;
+      //   player.style.filter = "alpha(opacity=" + op * 100 + ")";
+      //   op += op * 0.1 || 0.1;
+      // }, 50);
+      // console.log("block");
       clearInterval(interval);
     }
   }, 2000);
