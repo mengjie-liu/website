@@ -201,7 +201,7 @@ body{
 }
 .imgContainer {
   flex: 3;
-  padding-top: 18.75rem;
+  padding-top: 19%;
   /* padding-bottom: 1rem; */
   width: 100%;
   height: auto;
@@ -220,7 +220,7 @@ body{
 }
 .textDis {
   flex: 2;
-  margin-top: 18.75rem;
+  margin-top: 19%;
   padding-bottom: 1rem;
   overflow-y: scroll;
 }
