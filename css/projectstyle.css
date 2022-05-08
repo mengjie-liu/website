@@ -147,7 +147,7 @@ body{
 
 .pName {
   position: absolute;
-  top: 22.2%;
+  top: 12.75rem;
   left: 2.2%;
   margin: 0 auto;
   font-size: 2.25em;
@@ -157,7 +157,7 @@ body{
 
 .next {
   position: absolute;
-  top: 22.2%;
+  top: 12.75rem;
   right: 2.2%;
   margin: 0 auto;
   font-size: 2.25em;
@@ -169,7 +169,7 @@ body{
   position: absolute;
   font-size: 1.25em;
   line-height: 1.165;
-  top: 26.75%;
+  top: 15.5rem;
   left: 2.2%;
   width: 95.6%;
   display: flex;
@@ -201,7 +201,7 @@ body{
 }
 .imgContainer {
   flex: 3;
-  padding-top: 19%;
+  padding-top: 18.75rem;
   /* padding-bottom: 1rem; */
   width: 100%;
   height: auto;
@@ -220,7 +220,7 @@ body{
 }
 .textDis {
   flex: 2;
-  margin-top: 19%;
+  margin-top: 18.75rem;
   padding-bottom: 1rem;
   overflow-y: scroll;
 }
