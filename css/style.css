@@ -33,11 +33,23 @@ li {
   list-style: none;
 }
 
-.row a:hover {
+/* .row a:hover {
+  text-decoration: underline 1.5pt;
+  text-underline-offset: 2px;
+  cursor: pointer;
+} */
+
+.row:hover .pName>a{
   text-decoration: underline 1.5pt;
   text-underline-offset: 2px;
   cursor: pointer;
 }
+
+/* .row:hover .row > a{
+  text-decoration: underline 1.5pt;
+  text-underline-offset: 2px;
+  cursor: pointer;
+} */
 
 @media only screen and (min-width: 840px) {
 .title {
@@ -80,6 +92,7 @@ li {
   height: 100%;
   width: 100%;
   object-fit: cover;
+  pointer-events: none;
 }
 
 #player {
