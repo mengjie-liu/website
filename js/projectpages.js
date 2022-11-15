@@ -71,7 +71,7 @@ var resetCounter = function () {
   counter = 0;
   let interval = setInterval(function () {
     counter += 1;
-    if (counter > 20) {
+    if (counter > 50) {
       player.pause();
       player.currentTime = 0;
       player.play();
