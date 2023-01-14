@@ -65,6 +65,10 @@ li {
   text-underline-offset: 2px;
 }
 
+#phone{
+  display: none;
+}
+
 #name {
   top: 3.4%;
   left: 2.2%;
@@ -144,11 +148,23 @@ li {
     /* filter: drop-shadow(0 0 0.1rem rgba(255, 255, 255, 0.5)); */
   }
 
+  #phone{
+    display: block;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    font-size: 2.25em;
+    width: 100%;
+    text-align: center;
+  }
+
   #name {
     top: 2.25%;
     left: 2.75%;
   }
   #about {
+    display: none;
     top: 2.25%;
     right: 2.75%;
   }
@@ -164,6 +180,7 @@ li {
   }
 
   .vd {
+    display: none;
     position: fixed;
     transform: translateX(-50%) translateY(-50%);
     top: 50%;
@@ -174,11 +191,13 @@ li {
   }
   
   #player {
-    display: block;
+    display: none;
+    /* display: block; */
     /* opacity: 0; */
   }
 
   .projectList {
+    display: none;
     position: absolute;
     top: 20%;
     left: 2.75%;
