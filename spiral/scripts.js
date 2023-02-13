@@ -11,7 +11,7 @@ var camera = new THREE.OrthographicCamera(
   window.innerHeight / 2,
   window.innerHeight / -2,
   1,
-  1000
+  400
 );
 
 //     .PerspectiveCamera(
@@ -35,16 +35,16 @@ var keyLight = new THREE.DirectionalLight(
   new THREE.Color("hsl(30, 100%, 75%)"),
   1.0
 );
-keyLight.position.set(-500, 0, 80);
+keyLight.position.set(-400, 0, 50);
 
 var fillLight = new THREE.DirectionalLight(
   new THREE.Color("hsl(240, 100%, 75%)"),
-  0.75
+  0.85
 );
-fillLight.position.set(500, 0, 80);
+fillLight.position.set(300, 0, 20);
 
 var backLight = new THREE.DirectionalLight(0xffffff, 1.0);
-backLight.position.set(400, 0, -200).normalize();
+backLight.position.set(200, 0, -200).normalize();
 
 scene.add(keyLight);
 scene.add(fillLight);
@@ -62,6 +62,7 @@ var mtlLoader1 = new THREE.MTLLoader();
 mtlLoader1.setPath("assets/");
 mtlLoader1.load("day.mtl", function (materials) {
   materials.preload();
+  materials.transparent = true;
 
   var objLoader = new THREE.OBJLoader();
   objLoader.setMaterials(materials);
@@ -100,10 +101,10 @@ mtlLoader1.load("day.mtl", function (materials) {
 
 function rotate() {
   // OBA.rotation.x += -0.0001;
-  DObject.rotation.y += -0.005;
-  WObject.rotation.y += -0.0025;
-  MObject.rotation.y += -0.0005;
-  YObject.rotation.y += -0.00025;
+  DObject.rotation.y += -0.004;
+  WObject.rotation.y += -0.0006;
+  MObject.rotation.y += -0.00014;
+  YObject.rotation.y += -0.0000115;
   // OBA.rotation.z += -0.00065;
 }
 
